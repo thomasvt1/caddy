@@ -4,7 +4,7 @@
 FROM abiosoft/caddy:builder as builder
 
 ARG version="0.10.12"
-ARG plugins="git"
+ARG plugins="git,minify,cache"
 
 # process wrapper
 RUN go get -v github.com/abiosoft/parent
