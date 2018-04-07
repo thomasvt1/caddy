@@ -1,4 +1,4 @@
-# caddy
+# Caddy
 
 A [Docker](https://docker.com) image for [Caddy](https://caddyserver.com). This image includes the [git](https://caddyserver.com/docs/http.git) plugin. Plugins can be configured via the [`plugins` build arg](#custom-plugins).
 
