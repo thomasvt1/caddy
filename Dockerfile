@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.7
+FROM alpine:3.2
 MAINTAINER Thomas van Tilburg <thomasvt@me.com>
 
 RUN apk add --update openssh-client git tar php-fpm
