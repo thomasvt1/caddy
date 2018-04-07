@@ -3,22 +3,18 @@
 #
 FROM abiosoft/caddy:builder as builder
 
-ARG version="0.10.12"
 ARG plugins="git,minify,cache"
 
 # process wrapper
 RUN go get -v github.com/abiosoft/parent
 
-RUN VERSION=${version} PLUGINS=${plugins} /bin/sh /usr/bin/builder.sh
+RUN PLUGINS=${plugins} /bin/sh /usr/bin/builder.sh
 
 #
 # Final stage
 #
 FROM lsiobase/alpine:3.7
 LABEL maintainer "Thomas van Tilburg <thomasvt@me.com>"
-
-ARG version="0.10.11"
-LABEL caddy_version="$version"
 
 # Let's Encrypt Agreement
 ENV ACME_AGREE="false"
