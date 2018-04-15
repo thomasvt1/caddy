@@ -3,7 +3,7 @@
 #
 FROM abiosoft/caddy:builder as builder
 
-ARG plugins="git,minify,cache,dns.ovh"
+ARG plugins="git,minify,cache,dns,dns.ovh"
 
 # process wrapper
 RUN go get -v github.com/abiosoft/parent
